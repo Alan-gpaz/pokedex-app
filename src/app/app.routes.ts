@@ -1,38 +1,26 @@
+
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  
   {
     path: '',
     redirectTo: 'list-pokemon',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
   {
     path: 'list-pokemon',
     loadComponent: () =>
-      import('./pages/list-pokemon/list-pokemon.page').then(
-        (m) => m.ListPokemonPage
-      ),
+      import('./pages/list-pokemon/list-pokemon.page')
+        .then(m => m.ListPokemonPage)
   },
   {
-    path: 'detail-pokemon',
+    path: 'detail-pokemon/:id',
     loadComponent: () =>
-      import('./pages/detail-pokemon/detail-pokemon.page').then(
-        (m) => m.DetailPokemonPage
-      ),
+      import('./pages/detail-pokemon/detail-pokemon.page')
+        .then(m => m.DetailPokemonPage)
   },
   {
-    path: 'detail-pokemon',
-    loadComponent: () =>
-      import('./pages/detail-pokemon/detail-pokemon.page').then(
-        (m) => m.DetailPokemonPage
-      ),
-  },
-  {
-    path: 'list-pokemon',
-    loadComponent: () =>
-      import('./pages/list-pokemon/list-pokemon.page').then(
-        (m) => m.ListPokemonPage
-      ),
-  },
+    path: '**',
+    redirectTo: 'list-pokemon'
+  }
 ];

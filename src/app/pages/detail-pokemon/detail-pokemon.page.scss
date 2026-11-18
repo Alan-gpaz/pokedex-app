@@ -1,0 +1,101 @@
+
+ion-content {
+  --background: #0b0e17;
+  --color: #e8ebf4;
+}
+
+/* Nombre del Pokémon */
+.pokemon-header {
+  padding: 65px 20px 0;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+  }
+}
+
+/* Imagen del Pokémon */
+.pokemon-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto 25px;
+  height: 180px;
+
+  ion-img {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+  }
+}
+
+/* Tarjetas de información */
+ion-card {
+  --background: #151a28;
+  --color: white;
+
+  border: 1px solid #252b3b;
+  border-radius: 12px;
+  margin: 12px;
+  box-shadow: none;
+
+  ion-card-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  ion-card-content {
+    color: #e8ebf4;
+    font-size: 14px;
+  }
+}
+
+/* Tipos */
+.types-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  ion-img {
+    width: 65px;
+    height: 28px;
+  }
+}
+
+/* Estadísticas */
+.stats-grid {
+  ion-row {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  ion-progress-bar {
+    height: 8px;
+    border-radius: 5px;
+  }
+}
+
+/* Botón cerrar */
+ion-fab {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.btn-close {
+  --background: #ff5722;
+  --color: white;
+  --box-shadow: none;
+}
+
+/* Cargando */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
